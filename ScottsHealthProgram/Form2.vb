@@ -51,6 +51,6 @@
     End Sub
 
     Private Sub Form_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtPassword.PasswordChar = "*" '- Set password box as Password Box
     End Sub
 End Class

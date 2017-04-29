@@ -15,3 +15,12 @@ D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsH
 D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.exe
 D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.xml
 D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.pdb
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsHealthProgram.exe
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsHealthProgram.pdb
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsHealthProgram.xml
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.vbprojResolveAssemblyReference.cache
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_Home.resources
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_Login.resources
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_Register.resources
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Resources.resources
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.vbproj.GenerateResource.Cache

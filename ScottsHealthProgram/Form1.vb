@@ -66,6 +66,7 @@
             btnBlogAndDiary.Enabled = True
             btnRegister.Enabled = False
             btnLogin.Text = "Logout"
+            lblLogin.Text = "Log out of session"
             'if Invalid, disable buttons and set Login Button
         Else
             lblStatus.Text = "Not logged in!"
@@ -75,6 +76,7 @@
             btnBlogAndDiary.Enabled = False
             btnRegister.Enabled = True
             btnLogin.Text = "Login"
+            lblLogin.Text = "Log in as user"
         End If
 
     End Sub
