@@ -11,3 +11,7 @@ c:\Users\Scott\Documents\Visual Studio 2015\Projects\ScottsHealthProgram\ScottsH
 c:\Users\Scott\Documents\Visual Studio 2015\Projects\ScottsHealthProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.exe
 c:\Users\Scott\Documents\Visual Studio 2015\Projects\ScottsHealthProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.pdb
 c:\Users\Scott\Documents\Visual Studio 2015\Projects\ScottsHealthProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_Register.resources
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsHealthProgram.exe.config
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.exe
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.xml
+D:\BlockFront\GitLabs\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.pdb
