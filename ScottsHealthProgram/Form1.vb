@@ -7,7 +7,7 @@
     ' - e = Event Arguments
     Private Sub Form_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        AccountManager.populateUserFile()
+        AccountManager.populateUserFile() 'Populate users cache from users.txt file
 
     End Sub
 
@@ -67,6 +67,7 @@
             btnRegister.Enabled = False
             btnLogin.Text = "Logout"
             lblLogin.Text = "Log out of session"
+
             'if Invalid, disable buttons and set Login Button
         Else
             lblStatus.Text = "Not logged in!"
