@@ -96,4 +96,15 @@
 
     End Sub
 
+    'Event: BMI Calculator Button Click Event
+    ' This event occurs when the BMI Calculator button is Clicked
+    ' - sender = Sender of Event Click
+    ' - e = Event Arguments
+    Private Sub btnBMICalculator_Click(sender As Object, e As EventArgs) Handles btnBMICalculator.Click
+
+        Dim blogCalculator As New Form_BMICalculator() '- Create New BMI Calculator Form
+        blogCalculator.Owner = Me '- Set Home as Owner of BMI Calculator Form
+        blogCalculator.Show() '- Show BMI Calculator Form
+
+    End Sub
 End Class
