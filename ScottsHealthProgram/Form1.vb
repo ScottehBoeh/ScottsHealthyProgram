@@ -8,6 +8,8 @@
     Private Sub Form_Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         AccountManager.populateUserFile() 'Populate users cache from users.txt file
+        BlogManager.createBlogDirectory() 'Create directory to store blog data
+
 
     End Sub
 
@@ -44,7 +46,7 @@
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
         Dim registerForm As New Form_Register() '- Create New Register Form
-        registerForm.Owner = Me '- Set Home Register as Owner of Login Form
+        registerForm.Owner = Me '- Set Home as Owner of Register Form
         registerForm.Show() '- Show Register Form
 
     End Sub
@@ -79,6 +81,18 @@
             btnLogin.Text = "Login"
             lblLogin.Text = "Log in as user"
         End If
+
+    End Sub
+
+    'Event: Blogs Button Click Event
+    ' This event occurs when the Blog button is Clicked
+    ' - sender = Sender of Event Click
+    ' - e = Event Arguments
+    Private Sub btnBlogAndDiary_Click(sender As Object, e As EventArgs) Handles btnBlogAndDiary.Click
+
+        Dim blogForm As New Form_Blog() '- Create New Blog Form
+        blogForm.Owner = Me '- Set Home as Owner of Blog Form
+        blogForm.Show() '- Show Blog Form
 
     End Sub
 
