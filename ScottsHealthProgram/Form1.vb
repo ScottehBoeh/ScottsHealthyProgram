@@ -107,4 +107,16 @@
         blogCalculator.Show() '- Show BMI Calculator Form
 
     End Sub
+
+    'Event: Calories Counter Button Click Event
+    ' This event occurs when the Calories Counter button is Clicked
+    ' - sender = Sender of Event Click
+    ' - e = Event Arguments
+    Private Sub btnCaloriesCalculator_Click(sender As Object, e As EventArgs) Handles btnCaloriesCalculator.Click
+
+        Dim caloriesCounter As New Form_CaloriesCounter() '- Create New Calories Counter Form
+        caloriesCounter.Owner = Me '- Set Home as Owner of Calories Counter Form
+        caloriesCounter.Show() '- Show Calories Counter Form
+
+    End Sub
 End Class

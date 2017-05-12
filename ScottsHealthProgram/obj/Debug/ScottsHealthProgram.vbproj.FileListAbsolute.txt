@@ -39,3 +39,4 @@ C:\Users\1503257\Source\Repos\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug
 C:\Users\1503257\Source\Repos\ScottsHealthyProgram\ScottsHealthProgram\bin\Debug\ScottsHealthProgram.xml
 C:\Users\1503257\Source\Repos\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_Blog.resources
 C:\Users\1503257\Source\Repos\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_BMICalculator.resources
+C:\Users\1503257\Source\Repos\ScottsHealthyProgram\ScottsHealthProgram\obj\Debug\ScottsHealthProgram.Form_CaloriesCounter.resources
