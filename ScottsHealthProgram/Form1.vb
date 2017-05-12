@@ -119,4 +119,15 @@
         caloriesCounter.Show() '- Show Calories Counter Form
 
     End Sub
+
+    'Event: Reports Button Click Event
+    ' This event occurs when the Reports button is Clicked
+    ' - sender = Sender of Event Click
+    Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
+
+        Dim userReports As New Form_ReportsPage() '- Create New Reports Form
+        userReports.Owner = Me '- Set Home as Owner of Reports Form
+        userReports.Show() '- Show Reports Form
+
+    End Sub
 End Class

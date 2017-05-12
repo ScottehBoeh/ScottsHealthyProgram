@@ -25,10 +25,10 @@ Public Class AccountManager
         'Check if the user file has any inputs already. If not: add input to first line
         If (usersFile.Length.ToString = 0) Then
             'New user input
-            inputUserAndPass = givenUsername.GetHashCode.ToString + ":" + givenPassword.GetHashCode.ToString
+            inputUserAndPass = givenUsername.ToString + ":" + givenPassword.GetHashCode.ToString
         Else
             'New user input (on new line)
-            inputUserAndPass = Environment.NewLine + givenUsername.GetHashCode.ToString + ":" + givenPassword.GetHashCode.ToString
+            inputUserAndPass = Environment.NewLine + givenUsername.ToString + ":" + givenPassword.GetHashCode.ToString
         End If
 
         'Send input to text file
@@ -84,7 +84,7 @@ Public Class AccountManager
             Dim passWord As String = splitLine(1) '- Password from split
 
             'Does given username compare to username in text file
-            If (givenUsername.GetHashCode = userName) Then
+            If (givenUsername.ToString = userName) Then
 
                 'Does given password compare to password in text file
                 If (givenPassword.GetHashCode = passWord) Then
@@ -119,7 +119,7 @@ Public Class AccountManager
             Dim userName As String = splitLine(0) '- Get Username from split
 
             'If given username compares to username from split
-            If (givenUsername = userName.GetHashCode.ToString) Then
+            If (givenUsername = userName.ToString) Then
 
                 'Return true (The user does exist)
                 Return True
@@ -159,13 +159,13 @@ Public Class AccountManager
 
         Else
 
-            Dim adminString As String = "admin".GetHashCode '- Used to add Admin user to Users Text File
+            Dim adminString As String = "admin" '- Used to add Admin user to Users Text File
 
             'Inform user that file does not exist and that the file is being created in the given path
             MsgBox("Users storage file not found! Creating one in '" + ProgramVariables.loginFilePath + "'")
 
             Dim fileStream As FileStream = File.Create(ProgramVariables.loginFilePath) '- Create new Text File
-            Dim inputString As Byte() = New UTF8Encoding(True).GetBytes(adminString + ":" + adminString) '- Add Admin Account string to text file
+            Dim inputString As Byte() = New UTF8Encoding(True).GetBytes(adminString + ":" + adminString.GetHashCode.ToString) '- Add Admin Account string to text file
             fileStream.Write(inputString, 0, inputString.Length) '- Write to file
             fileStream.Close() '- Close Write Stream to file
             populateUserFile() '- Rerun function to refresh users file
