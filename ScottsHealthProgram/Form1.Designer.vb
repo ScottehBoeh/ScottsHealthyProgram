@@ -22,6 +22,7 @@ Partial Class Form_Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Home))
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
@@ -32,6 +33,8 @@ Partial Class Form_Home
         Me.btnBMICalculator = New System.Windows.Forms.Button()
         Me.btnBlogAndDiary = New System.Windows.Forms.Button()
         Me.btnReports = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblStatus
@@ -124,11 +127,24 @@ Partial Class Form_Home
         Me.btnReports.Text = "Reports"
         Me.btnReports.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(-7, 218)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(298, 44)
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'Form_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnReports)
         Me.Controls.Add(Me.btnBlogAndDiary)
         Me.Controls.Add(Me.btnBMICalculator)
@@ -141,6 +157,7 @@ Partial Class Form_Home
         Me.Controls.Add(Me.lblStatus)
         Me.Name = "Form_Home"
         Me.Text = "Scotts Healthy Program"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,4 +173,5 @@ Partial Class Form_Home
     Friend WithEvents btnBMICalculator As Button
     Friend WithEvents btnBlogAndDiary As Button
     Friend WithEvents btnReports As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

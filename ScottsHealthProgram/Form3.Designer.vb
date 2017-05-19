@@ -22,6 +22,7 @@ Partial Class Form_Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Register))
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -29,6 +30,8 @@ Partial Class Form_Register
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblRegister = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -90,11 +93,24 @@ Partial Class Form_Register
         Me.lblRegister.TabIndex = 7
         Me.lblRegister.Text = "Enter Username and Password to Register!"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(-7, 216)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(298, 45)
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        '
         'Form_Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.txtPassword)
@@ -104,6 +120,7 @@ Partial Class Form_Register
         Me.Controls.Add(Me.lblRegister)
         Me.Name = "Form_Register"
         Me.Text = "Scotts Healthy Program"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -116,4 +133,5 @@ Partial Class Form_Register
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblRegister As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

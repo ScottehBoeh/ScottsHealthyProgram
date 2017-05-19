@@ -22,6 +22,7 @@ Partial Class Form_CaloriesCounter
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_CaloriesCounter))
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.trackbarFood = New System.Windows.Forms.TrackBar()
         Me.lblInstructions = New System.Windows.Forms.Label()
@@ -29,7 +30,9 @@ Partial Class Form_CaloriesCounter
         Me.txtQuantity = New System.Windows.Forms.TextBox()
         Me.lblQuantity = New System.Windows.Forms.Label()
         Me.btnCalculate = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.trackbarFood, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -92,11 +95,24 @@ Partial Class Form_CaloriesCounter
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(-7, 219)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(298, 44)
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        '
         'Form_CaloriesCounter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCalculate)
         Me.Controls.Add(Me.lblQuantity)
         Me.Controls.Add(Me.txtQuantity)
@@ -107,6 +123,7 @@ Partial Class Form_CaloriesCounter
         Me.Name = "Form_CaloriesCounter"
         Me.Text = "Form_CaloriesCounter"
         CType(Me.trackbarFood, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -119,4 +136,5 @@ Partial Class Form_CaloriesCounter
     Friend WithEvents txtQuantity As TextBox
     Friend WithEvents lblQuantity As Label
     Friend WithEvents btnCalculate As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

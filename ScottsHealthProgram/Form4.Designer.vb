@@ -22,12 +22,15 @@ Partial Class Form_Blog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Blog))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtInput = New System.Windows.Forms.TextBox()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.lblTextCount = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lstBlogs = New System.Windows.Forms.ListBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -81,14 +84,27 @@ Partial Class Form_Blog
         Me.lstBlogs.FormattingEnabled = True
         Me.lstBlogs.Location = New System.Drawing.Point(13, 129)
         Me.lstBlogs.Name = "lstBlogs"
-        Me.lstBlogs.Size = New System.Drawing.Size(259, 186)
+        Me.lstBlogs.Size = New System.Drawing.Size(259, 147)
         Me.lstBlogs.TabIndex = 8
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(-7, 280)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(298, 44)
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
         '
         'Form_Blog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 323)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lstBlogs)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblTextCount)
@@ -97,6 +113,7 @@ Partial Class Form_Blog
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form_Blog"
         Me.Text = "Scotts Healthy Program"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -108,4 +125,5 @@ Partial Class Form_Blog
     Friend WithEvents lblTextCount As Label
     Friend WithEvents btnCancel As Button
     Friend WithEvents lstBlogs As ListBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
