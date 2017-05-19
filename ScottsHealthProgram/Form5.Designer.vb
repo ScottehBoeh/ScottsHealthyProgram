@@ -103,9 +103,9 @@ Partial Class Form_BMICalculator
         Me.rbGeneric.AutoSize = True
         Me.rbGeneric.Location = New System.Drawing.Point(12, 62)
         Me.rbGeneric.Name = "rbGeneric"
-        Me.rbGeneric.Size = New System.Drawing.Size(84, 17)
+        Me.rbGeneric.Size = New System.Drawing.Size(76, 17)
         Me.rbGeneric.TabIndex = 9
-        Me.rbGeneric.Text = "BMI Generic"
+        Me.rbGeneric.Text = "BMI Metric"
         Me.rbGeneric.UseVisualStyleBackColor = True
         '
         'rbEnglish

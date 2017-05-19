@@ -48,18 +48,25 @@
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
 
-        Dim output As Double
+        Dim output As Double '- Output from Calculation
+        Dim finalOutput As Double 'Formatted Output from Calculation
 
-        Dim weight As Double = Convert.ToDouble(txtWeight.Text)
-        Dim height As Double = Convert.ToDouble(txtHeight.Text)
+        Dim weight As Double = Convert.ToDouble(txtWeight.Text) 'Given Weight as Double
+        Dim height As Double = Convert.ToDouble(txtHeight.Text) 'Given Height as Double
 
+        'If user has chosen English BMI
         If (rbEnglish.Enabled = True) Then
-            output = (weight / (height * height)) * 703
+            output = weight / (height * height) * 703
+            finalOutput = Math.Round(output, 1)
+            'Else, use Generic/Metric BMI Calculator
         Else
-            output = (weight / (height * height))
+            output = weight / (height * height)
+            finalOutput = Math.Round(output, 1)
+            MsgBox(finalOutput)
         End If
 
-        txtOutput.Text = output
+        'Set output text box as given final output
+        txtOutput.Text = finalOutput
 
     End Sub
 
@@ -68,4 +75,5 @@
         lblWeight.Text = "Weight (in Pounds)"
         lblHeight.Text = "Height (in Inches)"
     End Sub
+
 End Class
