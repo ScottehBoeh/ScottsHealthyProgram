@@ -51,18 +51,17 @@
         Dim output As Double '- Output from Calculation
         Dim finalOutput As Double 'Formatted Output from Calculation
 
-        Dim weight As Double = Convert.ToDouble(txtWeight.Text) 'Given Weight as Double
-        Dim height As Double = Convert.ToDouble(txtHeight.Text) 'Given Height as Double
+        Dim weight As Double = Val(txtWeight.Text) 'Given Weight as Double
+        Dim height As Double = Val(txtHeight.Text) 'Given Height as Double
 
         'If user has chosen English BMI
-        If (rbEnglish.Enabled = True) Then
-            output = weight / (height * height) * 703
-            finalOutput = Math.Round(output, 1)
+        If (rbEnglish.Checked) Then
+            output = (weight / (height * height)) * 703
+            finalOutput = Math.Round(Val(output), 2)
             'Else, use Generic/Metric BMI Calculator
         Else
-            output = weight / (height * height)
-            finalOutput = Math.Round(output, 1)
-            MsgBox(finalOutput)
+            output = (weight / (height * height))
+            finalOutput = Math.Round(Val(output), 2)
         End If
 
         'Set output text box as given final output
