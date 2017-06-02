@@ -1,7 +1,4 @@
 ﻿Public Class Form_BMICalculator
-    Private Sub Form_BMICalculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     'Event: Cancel Button Click
     ' This event is used when the user clicks the Cancel Button
@@ -16,32 +13,40 @@
 
     End Sub
 
+    'Fired when the rbGeneric radio button has been changed/selected
     Private Sub rbGeneric_CheckedChanged(sender As Object, e As EventArgs) Handles rbGeneric.CheckedChanged
         txtOutput.Text = ""
         lblWeight.Text = "Weight (in Kilograms)"
         lblHeight.Text = "Height (in Meters)"
     End Sub
 
+    'Event listener used to check if the 2 provided fields have inputs from the user. If not, 
+    'it disables the calculate button.
     Private Sub txtWeight_TextChanged(sender As Object, e As EventArgs) Handles txtWeight.TextChanged
+
+        'If there is no text in the textbox(s)
         If (txtWeight.TextLength = 0 Or txtHeight.TextLength = 0) Then
 
-            btnCalculate.Enabled = False
+            btnCalculate.Enabled = False 'Set Calculate button to Not Enabled
 
         Else
 
-            btnCalculate.Enabled = True
+            btnCalculate.Enabled = True 'Set Calculate button to Enabled
 
         End If
     End Sub
 
+    'Event listener used to check if the 2 provided fields have inputs from the user. If not, 
+    'it disables the calculate button.
     Private Sub txtHeight_TextChanged(sender As Object, e As EventArgs) Handles txtHeight.TextChanged
+        'If there is no text in the textbox(s)
         If (txtWeight.TextLength = 0 Or txtHeight.TextLength = 0) Then
 
-            btnCalculate.Enabled = False
+            btnCalculate.Enabled = False 'Set Calculate button to Not Enabled
 
         Else
 
-            btnCalculate.Enabled = True
+            btnCalculate.Enabled = True 'Set Calculate button to Enabled
 
         End If
     End Sub
@@ -56,12 +61,12 @@
 
         'If user has chosen English BMI
         If (rbEnglish.Checked) Then
-            output = (weight / (height * height)) * 703
-            finalOutput = Math.Round(Val(output), 2)
+            output = (weight / (height * height)) * 703 'Proceed with english calculation
+            finalOutput = Math.Round(Val(output), 2) 'Round final output to 2 decimal places
             'Else, use Generic/Metric BMI Calculator
         Else
-            output = (weight / (height * height))
-            finalOutput = Math.Round(Val(output), 2)
+            output = (weight / (height * height)) 'Proceed with metric calculation
+            finalOutput = Math.Round(Val(output), 2) 'Round final output to 2 decimal places
         End If
 
         'Set output text box as given final output
@@ -69,6 +74,7 @@
 
     End Sub
 
+    'Fired when the rbEnglish radio button has been changed/selected
     Private Sub rbEnglish_CheckedChanged(sender As Object, e As EventArgs) Handles rbEnglish.CheckedChanged
         txtOutput.Text = ""
         lblWeight.Text = "Weight (in Pounds)"
