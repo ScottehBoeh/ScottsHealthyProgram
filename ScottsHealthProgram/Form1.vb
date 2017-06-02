@@ -61,6 +61,7 @@
 
         'if Valid, enable buttons and set Login Button
         If (ProgramVariables.validSession) Then
+            lblStatus.ForeColor = Color.Green
             lblStatus.Text = "Logged in as " + ProgramVariables.userName + "!"
             btnBMICalculator.Enabled = True
             btnCaloriesCalculator.Enabled = True
@@ -72,6 +73,7 @@
 
             'if Invalid, disable buttons and set Login Button
         Else
+            lblStatus.ForeColor = Color.DarkRed
             lblStatus.Text = "Not logged in!"
             btnBMICalculator.Enabled = False
             btnCaloriesCalculator.Enabled = False
