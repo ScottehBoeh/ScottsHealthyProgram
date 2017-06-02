@@ -40,11 +40,35 @@
     End Sub
 
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+
+        'Check that the Username has not already been registered
         If (AccountManager.userExists(txtUsername.Text)) Then
             lblNameStatus.ForeColor = Color.Red
             lblNameStatus.Text = "Username Taken! (" + txtUsername.Text + ")"
+            btnRegister.Enabled = False
         Else
             lblNameStatus.Text = ""
+            btnRegister.Enabled = True
+        End If
+
+        'Check that Username and Password have been entered (not blank)
+        'and check that the Password or Username contains no spaces
+        If (txtUsername.Text.Length = 0 Or txtPassword.Text.Length = 0 Or InStr(txtUsername.Text, " ") Or InStr(txtPassword.Text, " ")) Then
+            btnRegister.Enabled = False
+        Else
+            btnRegister.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+
+        'Check that Username and Password have been entered (not blank)
+        'and check that the Password or Username contains no spaces
+        If (txtUsername.Text.Length = 0 Or txtPassword.Text.Length = 0 Or InStr(txtUsername.Text, " ") Or InStr(txtPassword.Text, " ")) Then
+            btnRegister.Enabled = False
+        Else
+            btnRegister.Enabled = True
         End If
 
     End Sub

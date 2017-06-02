@@ -46,6 +46,7 @@ Partial Class Form_Register
         '
         'btnRegister
         '
+        Me.btnRegister.Enabled = False
         Me.btnRegister.Location = New System.Drawing.Point(12, 112)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(101, 23)
