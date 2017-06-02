@@ -31,6 +31,7 @@ Partial Class Form_Register
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblRegister = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblNameStatus = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,11 +106,20 @@ Partial Class Form_Register
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
+        'lblNameStatus
+        '
+        Me.lblNameStatus.AutoSize = True
+        Me.lblNameStatus.Location = New System.Drawing.Point(116, 46)
+        Me.lblNameStatus.Name = "lblNameStatus"
+        Me.lblNameStatus.Size = New System.Drawing.Size(0, 13)
+        Me.lblNameStatus.TabIndex = 15
+        '
         'Form_Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.lblNameStatus)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnRegister)
@@ -134,4 +144,5 @@ Partial Class Form_Register
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblRegister As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblNameStatus As Label
 End Class

@@ -38,4 +38,14 @@
     Private Sub Form_Register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.PasswordChar = "*" '- Set password box as Password Box
     End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+        If (AccountManager.userExists(txtUsername.Text)) Then
+            lblNameStatus.ForeColor = Color.Red
+            lblNameStatus.Text = "Username Taken! (" + txtUsername.Text + ")"
+        Else
+            lblNameStatus.Text = ""
+        End If
+
+    End Sub
 End Class
