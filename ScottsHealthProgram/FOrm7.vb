@@ -42,7 +42,7 @@
         Next
 
         'Declare total Weight
-        Dim totalWeight As Integer
+        Dim totalWeight As Double
         totalWeight = 0 'Set total weight to 0
 
         'Get total weight (all weights from array added together)
@@ -68,7 +68,5 @@
         txtLowest.Text = allWeights.Min & " kg" 'Display lowest weight in text box
 
     End Sub
-
-
 
 End Class
